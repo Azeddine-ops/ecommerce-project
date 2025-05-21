@@ -74,15 +74,16 @@
     <div class="countainer">
     <div class="navbar">
         <div class="logo"><img src="images/logo.png" alt="logo" width="125px"></div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pro.html">product</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="account.html">Account</a></li> 
-            </ul>
-        </nav>
+          <nav>
+  <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+  <ul id="menuItems">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pro.html">Product</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="account.html">Account</a></li>
+  </ul>
+</nav>
         <a href="cart.html"><img src="images/cart.png" alt="" width="30px " height="30px"></a>
     </div>
     </div>
@@ -150,5 +151,18 @@
     </div>
 </div>
 <script src="checkout.js"></script>
+<script>
+            let menuItems = document.getElementById("menuItems");
+menuItems.style.maxHeight = "0px";
+
+function toggleMenu() {
+  if (menuItems.style.maxHeight === "0px") {
+    menuItems.style.maxHeight = "200px";
+  } else {
+    menuItems.style.maxHeight = "0px";
+  }
+}
+
+        </script>
 </body>
 </html>
